@@ -1,0 +1,47 @@
+[
+    {
+        "agent_version": "7.53.0",
+        "integration": "Qdrant Cloud",
+        "check": "qdrant_cloud.openmetrics.health",
+        "statuses": [
+            "ok",
+            "critical"
+        ],
+        "groups": [
+            "host",
+            "endpoint"
+        ],
+        "name": "Qdrant Cloud OpenMetrics endpoint health",
+        "description": "Returns `CRITICAL` if the Agent is unable to connect to the Qdrant OpenMetrics endpoint, otherwise returns `OK`."
+    },
+    {
+        "agent_version": "7.53.0",
+        "integration": "Qdrant Cloud",
+        "check": "qdrant_cloud.readyz.status",
+        "statuses": [
+            "ok",
+            "critical"
+        ],
+        "groups": [
+            "host",
+            "qdrant_cloud_readyz_url"
+        ],
+        "name": "Qdrant Cloud readyz HTTP check",
+        "description": "Returns `OK` if /readyz endpoint returns a 200 response, otherwise returns `CRITICAL`."
+    },
+    {
+        "agent_version": "7.53.0",
+        "integration": "Qdrant Cloud",
+        "check": "qdrant_cloud.livez.status",
+        "statuses": [
+            "ok",
+            "critical"
+        ],
+        "groups": [
+            "host",
+            "qdrant_cloud_livez_url"
+        ],
+        "name": "Qdrant Cloud livez HTTP check",
+        "description": "Returns `OK` if /livez endpoint returns a 200 response, otherwise returns `CRITICAL`."
+    }
+]
